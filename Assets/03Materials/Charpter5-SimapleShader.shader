@@ -15,6 +15,8 @@ Shader "Custom/Charpter5/SimapleShader" {
 			#pragma vertex vert
 			#pragma fragment frag
 
+			#include "UnityCG.cginc"
+
 			fixed4 _Color;
 
 			// use a structure to define vertex input
@@ -34,6 +36,7 @@ Shader "Custom/Charpter5/SimapleShader" {
 			v2f vert(a2v v) {
 				v2f o;
 				o.pos = UnityObjectToClipPos (v.vertex);
+				// normal
 				o.color = v.normal * 0.5f + fixed3(0.5, 0.5, 0.5);
 				return o;
 			};
@@ -43,6 +46,7 @@ Shader "Custom/Charpter5/SimapleShader" {
 
 				fixed3 c = i.color;
 				c *= _Color.rgb;
+//				return fixed4(i.color, 1.0);
 				return fixed4(c, 1.0);
 			}
 
