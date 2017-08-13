@@ -26,8 +26,8 @@
 
 			struct v2f {
 				float4 pos : SV_POSITION;
-				fixed3 worldNormal : TEXCOORD0;
-				fixed3 worldPos : TEXCOORD1;
+				float3 worldNormal : TEXCOORD0;
+				float3 worldPos : TEXCOORD1;
 			};
 
 			v2f vert(a2v v) {
