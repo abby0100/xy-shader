@@ -48,7 +48,7 @@ Shader "Custom/Chapter7/RampTexture" {
 				return o;
 			}
 
-			fixed4 frag(v2f i) {
+			fixed4 frag(v2f i) : SV_Target {
 				fixed3 worldNormal = normalize(i.worldNormal);
 				fixed3 worldLightDir = normalize(UnityWorldSpaceLightDir(i.worldPos));
 
