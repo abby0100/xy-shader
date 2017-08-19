@@ -12,7 +12,9 @@ Shader "Custom/Chapter8/AlphaTesh" {
 
 		pass {
 			Tags {"LightMode"="ForwardBase"}
-			
+
+			Cull Off
+
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
